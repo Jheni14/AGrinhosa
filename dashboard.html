@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Campo - AgroConecta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><i class="fas fa-leaf"></i> AgroConecta</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#profile-section">Meu Perfil</a></li>
+                    <li><a href="#plantations-section">Minhas Plantações</a></li>
+                    <li><a href="social.html">Comunidade</a></li>
+                    <li><a href="index.html" class="btn">Sair <i class="fas fa-sign-out-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <section id="profile-section" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Meu Perfil de Produtor</h2>
+                <div class="profile-card">
+                    <img src="images/avatar-default.png" alt="Sua Foto" class="user-avatar">
+                    <div class="profile-details">
+                        <h3>Nome do Usuário</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Localização: Apucarana, PR</p>
+                        <p><i class="fas fa-tree"></i> Tipo de Agricultura: Orgânica</p>
+                        <button class="btn-small">Editar Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plantations-section" class="section-padding bg-light">
+            <div class="container">
+                <h3 class="section-title">Meus Cultivos</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="images/plantation-tomatoes.jpg" alt="Plantação de Tomates">
+                        <div class="card-content">
+                            <h4>Tomates Cereja</h4>
+                            <p>Status: Em crescimento</p>
+                            <button class="btn-small">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/plantation-lettuce.jpg" alt="Plantação de Alface">
+                        <div class="card-content">
+                            <h4>Alface Crespa</h4>
+                            <p>Status: Pronta para colheita</p>
+                            <button class="btn-small">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="card add-new-card">
+                        <i class="fas fa-plus-circle add-icon"></i>
+                        <h4>Adicionar Novo Cultivo</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 AgroConecta. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
