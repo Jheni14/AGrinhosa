@@ -43,7 +43,7 @@
                         <div class="card-content">
                             <h4>Novas Sementes Chegam ao Mercado</h4>
                             <p>Variedades mais resistentes para sua próxima colheita.</p>
-                            <label for="modal-toggle-news-sementes" class="read-more">Leia Mais <i class="fas fa-chevron-right"></i></label>
+                            <a href="#" class="read-more" data-modal-target="news-sementes-content">Leia Mais <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                     <div class="card">
@@ -51,7 +51,7 @@
                         <div class="card-content">
                             <h4>Previsão do Tempo para Agricultores</h4>
                             <p>Como o clima afeta suas plantações e como se preparar.</p>
-                            <label for="modal-toggle-news-clima" class="read-more">Leia Mais <i class="fas fa-chevron-right"></i></label>
+                            <a href="#" class="read-more" data-modal-target="news-clima-content">Leia Mais <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                     <div class="card">
@@ -59,7 +59,7 @@
                         <div class="card-content">
                             <h4>Dicas de Agricultura Sustentável</h4>
                             <p>Pequenas mudanças para um grande impacto no meio ambiente.</p>
-                            <label for="modal-toggle-news-sustentavel" class="read-more">Leia Mais <i class="fas fa-chevron-right"></i></label>
+                            <a href="#" class="read-more" data-modal-target="news-sustentavel-content">Leia Mais <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -75,25 +75,25 @@
                         <i class="fas fa-flask icon-circle"></i>
                         <h4>Análise de Solo</h4>
                         <p>Saiba o que seu solo precisa para prosperar.</p>
-                        <label for="modal-toggle-info-analise-solo" class="read-more">Ver Detalhes <i class="fas fa-arrow-right"></i></label>
+                        <a href="#" class="read-more" data-modal-target="info-analise-solo-content">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-seedling icon-circle"></i>
                         <h4>Melhores Sementes</h4>
                         <p>Escolha a semente certa para sua região.</p>
-                        <label for="modal-toggle-info-melhores-sementes" class="read-more">Ver Detalhes <i class="fas fa-arrow-right"></i></label>
+                        <a href="#" class="read-more" data-modal-target="info-melhores-sementes-content">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-spa icon-circle"></i>
                         <h4>Manejo de Plantas</h4>
                         <p>Cuidados diários para plantas saudáveis.</p>
-                        <label for="modal-toggle-info-manejo-plantas" class="read-more">Ver Detalhes <i class="fas fa-arrow-right"></i></label>
+                        <a href="#" class="read-more" data-modal-target="info-manejo-plantas-content">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-sun icon-circle"></i>
                         <h4>Clima e Previsão</h4>
                         <p>Informações climáticas para seu planejamento.</p>
-                        <label for="modal-toggle-info-clima-previsao" class="read-more">Ver Detalhes <i class="fas fa-arrow-right"></i></label>
+                        <a href="#" class="read-more" data-modal-target="info-clima-previsao-content">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -114,85 +114,126 @@
         </div>
     </footer>
 
-    <input type="checkbox" id="modal-toggle-news-sementes" class="modal-toggle-checkbox">
-    <input type="checkbox" id="modal-toggle-news-clima" class="modal-toggle-checkbox">
-    <input type="checkbox" id="modal-toggle-news-sustentavel" class="modal-toggle-checkbox">
-    <input type="checkbox" id="modal-toggle-info-analise-solo" class="modal-toggle-checkbox">
-    <input type="checkbox" id="modal-toggle-info-melhores-sementes" class="modal-toggle-checkbox">
-    <input type="checkbox" id="modal-toggle-info-manejo-plantas" class="modal-toggle-checkbox">
-    <input type="checkbox" id="modal-toggle-info-clima-previsao" class="modal-toggle-checkbox">
+    <div id="modal-overlay" class="modal-overlay">
+        <div id="modal-content" class="modal-content">
+            <span class="close-button" id="close-modal-button">&times;</span>
+            <div id="modal-body" class="modal-body">
+                <div id="news-sementes-content" class="modal-text-content">
+                    <h2>Novas Sementes Chegam ao Mercado: A Revolução da Produtividade no Campo</h2>
+                    <p>O cenário da agricultura moderna está sendo transformado pela constante inovação, e um dos pilares dessa mudança é o desenvolvimento de novas variedades de sementes. Empresas de biotecnologia e pesquisa agrícola estão dedicando recursos massivos para criar sementes geneticamente aprimoradas, que não apenas prometem, mas de fato entregam maior produtividade por hectare.</p>
+                    <p>Essas sementes de última geração são projetadas com características específicas para enfrentar os desafios contemporâneos do campo. A resistência a pragas e doenças é um dos atributos mais valorizados, pois reduz a dependência de defensivos agrícolas, minimizando custos e o impacto ambiental. Além disso, muitas dessas novas variedades são mais tolerantes a condições climáticas adversas, como períodos prolongados de seca, excesso de chuvas, ou variações bruscas de temperatura, que são cada vez mais comuns devido às mudanças climáticas.</p>
+                    <p>No Brasil, um gigante agrícola, a adoção dessas tecnologias é fundamental para manter a competitividade e a segurança alimentar. Produtores no Paraná, especialmente na região de Apucarana, têm sido pioneiros na experimentação de algumas dessas variedades, reportando resultados que superam as expectativas. A maior uniformidade no desenvolvimento das plantas e a redução nas perdas pós-colheita são benefícios diretos que se traduzem em maior rentabilidade para o agricultor.</p>
+                    <p>Contudo, a simples aquisição dessas sementes não garante o sucesso. É crucial que o produtor invista em análises de solo detalhadas para entender as necessidades nutricionais específicas da terra e, assim, otimizar a adubação. O manejo adequado da água e a integração com práticas de agricultura de precisão, como o uso de drones e sensores, podem potencializar ainda mais os benefícios dessas inovações.</p>
+                    <p>A pesquisa continua avançando, com foco em sementes que necessitem de menos água, que sejam mais eficientes na absorção de nutrientes e que contribuam para a fixação de carbono no solo. A expectativa é que, nos próximos anos, essas tecnologias não apenas aumentem a produção global de alimentos, mas também impulsionem uma agricultura mais sustentável e resiliente, capaz de alimentar uma população crescente com menor impacto sobre os recursos naturais. A AgrolConecta continuará acompanhando de perto essas tendências, trazendo as últimas novidades e dicas para a sua lavoura.</p>
+                </div>
 
+                <div id="news-clima-content" class="modal-text-content">
+                    <h2>Previsão do Tempo: A Ferramenta Essencial para o Planejamento Agrícola</h2>
+                    <p>Para o agricultor, o clima não é apenas um tema de conversa, mas sim um dos principais determinantes do sucesso ou fracasso da safra. Ter acesso a previsões do tempo precisas e atualizadas é uma ferramenta indispensável para o planejamento e a execução das atividades no campo. Decisões críticas, como o momento ideal para o plantio, a aplicação de fertilizantes e defensivos, a realização da colheita, ou a necessidade de irrigação, são diretamente influenciadas pelas condições meteorológicas.</p>
+                    <p>Com as mudanças climáticas, a imprevisibilidade dos eventos extremos se tornou uma realidade mais frequente. Ondas de calor inesperadas, secas prolongadas, chuvas torrenciais fora de época ou geadas repentinas podem devastar lavouras inteiras se o produtor não estiver preparado. É aqui que a tecnologia de previsão do tempo entra como um aliado poderoso.</p>
+                    <p>Plataformas e aplicativos especializados fornecem dados detalhados para microrregiões, como a de Apucarana, no Paraná, permitindo que o agricultor tome decisões baseadas em informações qualificadas. Dados sobre temperatura, umidade do ar e do solo, velocidade e direção do vento, e o volume de precipitação são cruciais para otimizar o uso de recursos e minimizar perdas. Por exemplo, a pulverização de defensivos em dias muito ventosos pode resultar em deriva do produto, afetando áreas não-alvo e diminuindo a eficácia. Da mesma forma, uma colheita antecipada ou tardia devido a uma previsão de chuva ou seca pode impactar significativamente a qualidade e o volume da produção.</p>
+                    <p>É importante, no entanto, entender que previsões são modelos probabilísticos e podem ter margem de erro. Por isso, recomenda-se acompanhar diversas fontes, comparar as informações e, principalmente, observar os sinais do ambiente local. A combinação da tecnologia com o conhecimento empírico do campo é a fórmula para uma gestão de riscos mais eficiente. A AgroConecta incentiva o uso contínuo dessas ferramentas, pois estar um passo à frente do clima significa maior segurança e rentabilidade para a sua lavoura.</p>
+                </div>
 
-    <div class="modal-overlay">
-        <div class="modal-content">
-            <label for="close-all-modals" class="close-button">&times;</label>
-            <input type="checkbox" id="close-all-modals" class="modal-toggle-checkbox">
+                <div id="news-sustentavel-content" class="modal-text-content">
+                    <h2>Dicas de Agricultura Sustentável: Cultivando o Futuro com Responsabilidade</h2>
+                    <p>A agricultura sustentável não é apenas uma tendência, mas uma necessidade urgente para garantir a produção de alimentos a longo prazo, ao mesmo tempo em que se protege o meio ambiente e se promove o bem-estar social e econômico dos produtores. Ela envolve um conjunto de práticas que visam equilibrar a produtividade com a preservação dos recursos naturais e a redução do impacto ambiental. Pequenas mudanças na forma como se cultiva podem gerar um impacto positivo gigantesco.</p>
+                    <p>Uma das pedras fundamentais da sustentabilidade no campo é a rotação de culturas. Ao alternar diferentes tipos de plantas em uma mesma área ao longo do tempo, é possível melhorar a fertilidade do solo, quebrar o ciclo de pragas e doenças específicas de uma cultura, e reduzir a necessidade de insumos químicos. Isso fortalece a biodiversidade do solo e torna o ecossistema agrícola mais resiliente.</p>
+                    <p>O manejo eficiente da água é outro pilar. Com a crescente escassez hídrica em muitas regiões, a otimização do uso da água é crucial. Sistemas de irrigação localizada, como gotejamento ou microaspersão, minimizam o desperdício em comparação com a irrigação por inundação. A captação e o armazenamento de água da chuva também são práticas inteligentes que podem suprir parte da demanda hídrica da lavoura, especialmente em regiões como Apucarana, que podem ter períodos de seca ou chuvas irregulares.</p>
+                    <p>A fertilização orgânica e o uso de adubos verdes são alternativas aos fertilizantes sintéticos. O composto orgânico, o esterco e as plantas de cobertura (adubos verdes) enriquecem o solo com matéria orgânica, melhoram sua estrutura, aumentam a capacidade de retenção de água e nutrientes, e promovem a vida microbiana benéfica. Isso resulta em um solo mais saudável e produtivo a longo prazo, e na diminuição da poluição de corpos d'água.</p>
+                    <p>No controle de pragas e doenças, a preferência deve ser sempre pelo controle biológico. Utilizar inimigos naturais das pragas (insetos benéficos, fungos, bactérias) ou armadilhas naturais reduz a necessidade de pesticidas químicos, protegendo a saúde do agricultor, dos consumidores e do meio ambiente. O monitoramento constante da lavoura permite identificar problemas no início e aplicar soluções menos agressivas.</p>
+                    <p>Por fim, práticas como o plantio direto (onde o solo não é arado ou revolvido) e a manutenção da cobertura do solo com resíduos de culturas anteriores ou plantas de cobertura são essenciais para reduzir a erosão, conservar a umidade e sequestrar carbono na terra. Adotar a agricultura sustentável não só contribui para um planeta mais saudável, mas também pode gerar economia de custos a longo prazo e agregar valor aos produtos agrícolas, atendendo a uma demanda crescente por alimentos produzidos de forma responsável. Junte-se à comunidade AgroConecta para compartilhar suas experiências e aprender com outros produtores sobre como tornar sua fazenda mais sustentável.</p>
+                </div>
 
-            <div class="modal-text-content" id="modal-content-news-sementes">
-                <h2>Novas Sementes Chegam ao Mercado: A Revolução da Produtividade no Campo</h2>
-                <p>O cenário da agricultura moderna está sendo transformado pela constante inovação, e um dos pilares dessa mudança é o desenvolvimento de novas variedades de sementes. Empresas de biotecnologia e pesquisa agrícola estão dedicando recursos massivos para criar sementes geneticamente aprimoradas, que não apenas prometem, mas de fato entregam maior produtividade por hectare.</p>
-                <p>Essas sementes de última geração são projetadas com características específicas para enfrentar os desafios contemporâneos do campo. A resistência a pragas e doenças é um dos atributos mais valorizados, pois reduz a dependência de defensivos agrícolas, minimizando custos e o impacto ambiental. Além disso, muitas dessas novas variedades são mais tolerantes a condições climáticas adversas, como períodos prolongados de seca, excesso de chuvas, ou variações bruscas de temperatura, que são cada vez mais comuns devido às mudanças climáticas.</p>
-                <p>No Brasil, um gigante agrícola, a adoção dessas tecnologias é fundamental para manter a competitividade e a segurança alimentar. Produtores no Paraná, especialmente na região de Apucarana, têm sido pioneiros na experimentação de algumas dessas variedades, reportando resultados que superam as expectativas. A maior uniformidade no desenvolvimento das plantas e a redução nas perdas pós-colheita são benefícios diretos que se traduzem em maior rentabilidade para o agricultor.</p>
-                <p>Contudo, a simples aquisição dessas sementes não garante o sucesso. É crucial que o produtor invista em análises de solo detalhadas para entender as necessidades nutricionais específicas da terra e, assim, otimizar a adubação. O manejo adequado da água e a integração com práticas de agricultura de precisão, como o uso de drones e sensores, podem potencializar ainda mais os benefícios dessas inovações.</p>
-                <p>A pesquisa continua avançando, com foco em sementes que necessitem de menos água, que sejam mais eficientes na absorção de nutrientes e que contribuam para a fixação de carbono no solo. A expectativa é que, nos próximos anos, essas tecnologias não apenas aumentem a produção global de alimentos, mas também impulsionem uma agricultura mais sustentável e resiliente, capaz de alimentar uma população crescente com menor impacto sobre os recursos naturais. A AgrolConecta continuará acompanhando de perto essas tendências, trazendo as últimas novidades e dicas para a sua lavoura.</p>
-            </div>
+                <div id="info-analise-solo-content" class="modal-text-content">
+                    <h2>Análise de Solo: O Alicerce Fundamental para a Produtividade Sustentável</h2>
+                    <p>A análise de solo não é um mero procedimento, mas sim a base sólida sobre a qual se constrói uma agricultura verdadeiramente produtiva e sustentável. Ignorar a composição do seu solo é como tentar construir uma casa sem conhecer o terreno: os resultados podem ser desastrosos e economicamente inviáveis. Esta ferramenta essencial permite que o agricultor desvende os segredos de sua terra, compreendendo suas características químicas, físicas e biológicas.</p>
+                    <p>Ao coletar amostras representativas do seu campo e enviá-las a um laboratório especializado, você obtém um relatório detalhado que revela a quantidade de nutrientes disponíveis (como nitrogênio, fósforo, potássio, cálcio, magnésio), a presença de micronutrientes, o nível de matéria orgânica, a capacidade de troca catiônica (CTC) e, crucialmente, o pH do solo. Cada um desses fatores desempenha um papel vital no desenvolvimento das plantas.</p>
+                    <p>Um pH inadequado, por exemplo, pode "travar" a disponibilidade de nutrientes, mesmo que eles estejam presentes no solo. A correção da acidez ou alcalinidade, geralmente com calagem, é um dos primeiros passos após uma análise. Com as informações precisas em mãos, o produtor pode realizar uma adubação racional e equilibrada, aplicando somente os nutrientes que o solo realmente necessita e nas quantidades corretas. Isso evita o desperdício de insumos caros, reduz a contaminação ambiental por excesso de fertilizantes e garante que as plantas absorvam o máximo de nutrientes para um crescimento vigoroso e uma produção de alta qualidade.</p>
+                    <p>A periodicidade da análise de solo pode variar, mas, em geral, recomenda-se realizá-la antes de cada ciclo de cultivo ou a cada dois anos, especialmente em áreas de produção intensiva. Em regiões como Apucarana, no Paraná, onde diferentes tipos de solo podem ocorrer, uma análise bem feita é ainda mais importante. Além dos aspectos químicos, alguns laboratórios oferecem análises físicas (textura, densidade) e biológicas (atividade microbiana), que fornecem um panorama ainda mais completo da saúde do solo.</p>
+                    <p>Investir em análise de solo é, portanto, investir na sua fazenda. É a garantia de que você está fornecendo as condições ideais para suas culturas prosperarem, otimizando recursos, aumentando a produtividade e construindo um sistema agrícola mais resiliente e rentável a longo prazo. Não subestime o poder de conhecer seu solo – ele é o seu maior parceiro na produção.</p>
+                </div>
 
-            <div class="modal-text-content" id="modal-content-news-clima">
-                <h2>Previsão do Tempo: A Ferramenta Essencial para o Planejamento Agrícola</h2>
-                <p>Para o agricultor, o clima não é apenas um tema de conversa, mas sim um dos principais determinantes do sucesso ou fracasso da safra. Ter acesso a previsões do tempo precisas e atualizadas é uma ferramenta indispensável para o planejamento e a execução das atividades no campo. Decisões críticas, como o momento ideal para o plantio, a aplicação de fertilizantes e defensivos, a realização da colheita, ou a necessidade de irrigação, são diretamente influenciadas pelas condições meteorológicas.</p>
-                <p>Com as mudanças climáticas, a imprevisibilidade dos eventos extremos se tornou uma realidade mais frequente. Ondas de calor inesperadas, secas prolongadas, chuvas torrenciais fora de época ou geadas repentinas podem devastar lavouras inteiras se o produtor não estiver preparado. É aqui que a tecnologia de previsão do tempo entra como um aliado poderoso.</p>
-                <p>Plataformas e aplicativos especializados fornecem dados detalhados para microrregiões, como a de Apucarana, no Paraná, permitindo que o agricultor tome decisões baseadas em informações qualificadas. Dados sobre temperatura, umidade do ar e do solo, velocidade e direção do vento, e o volume de precipitação são cruciais para otimizar o uso de recursos e minimizar perdas. Por exemplo, a pulverização de defensivos em dias muito ventosos pode resultar em deriva do produto, afetando áreas não-alvo e diminuindo a eficácia. Da mesma forma, uma colheita antecipada ou tardia devido a uma previsão de chuva ou seca pode impactar significativamente a qualidade e o volume da produção.</p>
-                <p>É importante, no entanto, entender que previsões são modelos probabilísticos e podem ter margem de erro. Por isso, recomenda-se acompanhar diversas fontes, comparar as informações e, principalmente, observar os sinais do ambiente local. A combinação da tecnologia com o conhecimento empírico do campo é a fórmula para uma gestão de riscos mais eficiente. A AgroConecta incentiva o uso contínuo dessas ferramentas, pois estar um passo à frente do clima significa maior segurança e rentabilidade para a sua lavoura.</p>
-            </div>
+                <div id="info-melhores-sementes-content" class="modal-text-content">
+                    <h2>Melhores Sementes: A Escolha Estratégica para uma Colheita de Sucesso</h2>
+                    <p>A seleção das sementes é uma das decisões mais estratégicas e impactantes no planejamento de qualquer lavoura. Não se trata apenas de plantar algo; é sobre escolher a genética que melhor se adapta às suas condições específicas e aos seus objetivos de produção. Uma escolha acertada pode significar a diferença entre uma colheita abundante e rentável e uma safra de baixo desempenho.</p>
+                    <p>Diversos fatores devem ser meticulosamente considerados ao selecionar as melhores sementes para sua região e seu tipo de solo. Primeiramente, o clima da sua localidade é primordial. Em Apucarana, no Paraná, as condições de temperatura, regime de chuvas e luminosidade ao longo do ano determinarão quais cultivares terão o melhor desenvolvimento. Sementes que prosperam em um clima podem não se adaptar bem a outro, resultando em estresse para a planta e menor produtividade.</p>
+                    <p>Em segundo lugar, as características do seu solo, reveladas pela análise de solo, são cruciais. Algumas sementes têm melhor desempenho em solos argilosos, outras em arenosos; algumas toleram mais acidez, outras precisam de um pH mais neutro. A compatibilidade da semente com as condições do solo otimiza a absorção de nutrientes e o enraizamento.</p>
+                    <p>Além disso, considere a resistência ou tolerância a pragas e doenças comuns na sua área. Muitas sementes modernas são desenvolvidas com genes que conferem maior proteção contra patógenos e insetos, reduzindo a necessidade de aplicação de defensivos e os custos associados. Isso também contribui para uma agricultura mais sustentável.</p>
+                    <p>Outro ponto importante é a finalidade da cultura. Você está plantando para consumo próprio, para venda no mercado local, para exportação ou para ração animal? As exigências de qualidade, tamanho, sabor e tempo de colheita variam, e a semente deve ser selecionada para atender a esses requisitos. Pesquise sobre as cultivares mais indicadas para o Paraná e para a sua microrregião, conversando com extensionistas agrícolas, cooperativas e outros produtores experientes.</p>
+                    <p>A procedência da semente também é vital. Adquira sementes apenas de fornecedores e empresas idôneas, que garantam a qualidade genética, a sanidade e a pureza do lote. Sementes certificadas passam por rigorosos controles de qualidade, o que minimiza riscos de falha na germinação, contaminação por ervas daninhas ou doenças. A AgroConecta oferece um guia prático e recursos para ajudá-lo a pesquisar e comparar as características das sementes mais adequadas para diversas culturas, garantindo que sua escolha seja a mais assertiva para uma colheita próspera.</p>
+                </div>
 
-            <div class="modal-text-content" id="modal-content-news-sustentavel">
-                <h2>Dicas de Agricultura Sustentável: Cultivando o Futuro com Responsabilidade</h2>
-                <p>A agricultura sustentável não é apenas uma tendência, mas uma necessidade urgente para garantir a produção de alimentos a longo prazo, ao mesmo tempo em que se protege o meio ambiente e se promove o bem-estar social e econômico dos produtores. Ela envolve um conjunto de práticas que visam equilibrar a produtividade com a preservação dos recursos naturais e a redução do impacto ambiental. Pequenas mudanças na forma como se cultiva podem gerar um impacto positivo gigantesco.</p>
-                <p>Uma das pedras fundamentais da sustentabilidade no campo é a rotação de culturas. Ao alternar diferentes tipos de plantas em uma mesma área ao longo do tempo, é possível melhorar a fertilidade do solo, quebrar o ciclo de pragas e doenças específicas de uma cultura, e reduzir a necessidade de insumos químicos. Isso fortalece a biodiversidade do solo e torna o ecossistema agrícola mais resiliente.</p>
-                <p>O manejo eficiente da água é outro pilar. Com a crescente escassez hídrica em muitas regiões, a otimização do uso da água é crucial. Sistemas de irrigação localizada, como gotejamento ou microaspersão, minimizam o desperdício em comparação com a irrigação por inundação. A captação e o armazenamento de água da chuva também são práticas inteligentes que podem suprir parte da demanda hídrica da lavoura, especialmente em regiões como Apucarana, que podem ter períodos de seca ou chuvas irregulares.</p>
-                <p>A fertilização orgânica e o uso de adubos verdes são alternativas aos fertilizantes sintéticos. O composto orgânico, o esterco e as plantas de cobertura (adubos verdes) enriquecem o solo com matéria orgânica, melhoram sua estrutura, aumentam a capacidade de retenção de água e nutrientes, e promovem a vida microbiana benéfica. Isso resulta em um solo mais saudável e produtivo a longo prazo, e na diminuição da poluição de corpos d'água.</p>
-                <p>No controle de pragas e doenças, a preferência deve ser sempre pelo controle biológico. Utilizar inimigos naturais das pragas (insetos benéficos, fungos, bactérias) ou armadilhas naturais reduz a necessidade de pesticidas químicos, protegendo a saúde do agricultor, dos consumidores e do meio ambiente. O monitoramento constante da lavoura permite identificar problemas no início e aplicar soluções menos agressivas.</p>
-                <p>Por fim, práticas como o plantio direto (onde o solo não é arado ou revolvido) e a manutenção da cobertura do solo com resíduos de culturas anteriores ou plantas de cobertura são essenciais para reduzir a erosão, conservar a umidade e sequestrar carbono na terra. Adotar a agricultura sustentável não só contribui para um planeta mais saudável, mas também pode gerar economia de custos a longo prazo e agregar valor aos produtos agrícolas, atendendo a uma demanda crescente por alimentos produzidos de forma responsável. Junte-se à comunidade AgroConecta para compartilhar suas experiências e aprender com outros produtores sobre como tornar sua fazenda mais sustentável.</p>
-            </div>
+                <div id="info-manejo-plantas-content" class="modal-text-content">
+                    <h2>Manejo de Plantas: Cuidados Diários para o Desenvolvimento Saudável da Lavoura</h2>
+                    <p>O manejo de plantas é um conceito abrangente que engloba todas as práticas e intervenções realizadas ao longo do ciclo de vida da cultura, desde a germinação até a colheita, com o objetivo de otimizar o crescimento, a saúde e a produtividade das lavouras. Não se trata de uma única ação, mas de um conjunto contínuo de cuidados que exigem atenção, conhecimento e adaptabilidade por parte do agricultor.</p>
+                    <p>A irrigação adequada é, talvez, a prática de manejo mais fundamental. Saber a quantidade certa de água a ser aplicada e o momento ideal para fazê-lo é crucial. O excesso pode levar ao apodrecimento das raízes e ao lixiviamento de nutrientes, enquanto a falta causa estresse hídrico e perda de produtividade. Monitorar a umidade do solo e observar os sinais das plantas são essenciais, especialmente em regiões como Apucarana, que podem ter períodos de seca ou chuvas irregulares.</p>
+                    <p>Outra prática importante é o controle de plantas daninhas. Ervas invasoras competem com a cultura principal por água, luz e nutrientes, reduzindo significativamente a produção. Métodos de controle podem incluir capina manual, mecânica, uso de herbicidas seletivos (com responsabilidade ambiental) ou, de forma mais sustentável, a utilização de plantas de cobertura que suprimem as daninhas.</p>
+                    <p>A poda e o desbaste são técnicas que visam otimizar a distribuição de energia da planta, direcionando-a para o desenvolvimento de frutos ou grãos de maior qualidade. Em algumas culturas, a poda também melhora a aeração e a penetração de luz, prevenindo doenças.</p>
+                    <p>O manejo nutricional, baseado na análise de solo, garante que as plantas recebam a dose correta de fertilizantes no momento certo, evitando deficiências ou excessos que podem ser prejudiciais. A identificação precoce de pragas e doenças é vital. O monitoramento constante da lavoura permite que o agricultor perceba os primeiros sinais de problemas e implemente medidas de controle (sejam biológicas, culturais ou químicas) antes que a infestação se espalhe e cause danos irreversíveis.</p>
+                    <p>Um manejo eficiente também considera a rotação de culturas e a utilização de culturas de cobertura, que contribuem para a saúde do solo e a resiliência do sistema agrícola. Em última análise, o manejo de plantas é uma arte e uma ciência que exige observação atenta, conhecimento técnico e a capacidade de reagir rapidamente às necessidades da lavoura. Ao dominar essas práticas, o produtor garante plantas mais saudáveis, uma colheita mais farta e um futuro mais próspero para sua propriedade.</p>
+                </div>
 
-            <div class="modal-text-content" id="modal-content-info-analise-solo">
-                <h2>Análise de Solo: O Alicerce Fundamental para a Produtividade Sustentável</h2>
-                <p>A análise de solo não é um mero procedimento, mas sim a base sólida sobre a qual se constrói uma agricultura verdadeiramente produtiva e sustentável. Ignorar a composição do seu solo é como tentar construir uma casa sem conhecer o terreno: os resultados podem ser desastrosos e economicamente inviáveis. Esta ferramenta essencial permite que o agricultor desvende os segredos de sua terra, compreendendo suas características químicas, físicas e biológicas.</p>
-                <p>Ao coletar amostras representativas do seu campo e enviá-las a um laboratório especializado, você obtém um relatório detalhado que revela a quantidade de nutrientes disponíveis (como nitrogênio, fósforo, potássio, cálcio, magnésio), a presença de micronutrientes, o nível de matéria orgânica, a capacidade de troca catiônica (CTC) e, crucialmente, o pH do solo. Cada um desses fatores desempenha um papel vital no desenvolvimento das plantas.</p>
-                <p>Um pH inadequado, por exemplo, pode "travar" a disponibilidade de nutrientes, mesmo que eles estejam presentes no solo. A correção da acidez ou alcalinidade, geralmente com calagem, é um dos primeiros passos após uma análise. Com as informações precisas em mãos, o produtor pode realizar uma adubação racional e equilibrada, aplicando somente os nutrientes que o solo realmente necessita e nas quantidades corretas. Isso evita o desperdício de insumos caros, reduz a contaminação ambiental por excesso de fertilizantes e garante que as plantas absorvam o máximo de nutrientes para um crescimento vigoroso e uma produção de alta qualidade.</p>
-                <p>A periodicidade da análise de solo pode variar, mas, em geral, recomenda-se realizá-la antes de cada ciclo de cultivo ou a cada dois anos, especialmente em áreas de produção intensiva. Em regiões como Apucarana, no Paraná, onde diferentes tipos de solo podem ocorrer, uma análise bem feita é ainda mais importante. Além dos aspectos químicos, alguns laboratórios oferecem análises físicas (textura, densidade) e biológicas (atividade microbiana), que fornecem um panorama ainda mais completo da saúde do solo.</p>
-                <p>Investir em análise de solo é, portanto, investir na sua fazenda. É a garantia de que você está fornecendo as condições ideais para suas culturas prosperarem, otimizando recursos, aumentando a produtividade e construindo um sistema agrícola mais resiliente e rentável a longo prazo. Não subestime o poder de conhecer seu solo – ele é o seu maior parceiro na produção.</p>
-            </div>
-
-            <div class="modal-text-content" id="modal-content-info-melhores-sementes">
-                <h2>Melhores Sementes: A Escolha Estratégica para uma Colheita de Sucesso</h2>
-                <p>A seleção das sementes é uma das decisões mais estratégicas e impactantes no planejamento de qualquer lavoura. Não se trata apenas de plantar algo; é sobre escolher a genética que melhor se adapta às suas condições específicas e aos seus objetivos de produção. Uma escolha acertada pode significar a diferença entre uma colheita abundante e rentável e uma safra de baixo desempenho.</p>
-                <p>Diversos fatores devem ser meticulosamente considerados ao selecionar as melhores sementes para sua região e seu tipo de solo. Primeiramente, o clima da sua localidade é primordial. Em Apucarana, no Paraná, as condições de temperatura, regime de chuvas e luminosidade ao longo do ano determinarão quais cultivares terão o melhor desenvolvimento. Sementes que prosperam em um clima podem não se adaptar bem a outro, resultando em estresse para a planta e menor produtividade.</p>
-                <p>Em segundo lugar, as características do seu solo, reveladas pela análise de solo, são cruciais. Algumas sementes têm melhor desempenho em solos argilosos, outras em arenosos; algumas toleram mais acidez, outras precisam de um pH mais neutro. A compatibilidade da semente com as condições do solo otimiza a absorção de nutrientes e o enraizamento.</p>
-                <p>Além disso, considere a resistência ou tolerância a pragas e doenças comuns na sua área. Muitas sementes modernas são desenvolvidas com genes que conferem maior proteção contra patógenos e insetos, reduzindo a necessidade de aplicação de defensivos e os custos associados. Isso também contribui para uma agricultura mais sustentável.</p>
-                <p>Outro ponto importante é a finalidade da cultura. Você está plantando para consumo próprio, para venda no mercado local, para exportação ou para ração animal? As exigências de qualidade, tamanho, sabor e tempo de colheita variam, e a semente deve ser selecionada para atender a esses requisitos. Pesquise sobre as cultivares mais indicadas para o Paraná e para a sua microrregião, conversando com extensionistas agrícolas, cooperativas e outros produtores experientes.</p>
-                <p>A procedência da semente também é vital. Adquira sementes apenas de fornecedores e empresas idôneas, que garantam a qualidade genética, a sanidade e a pureza do lote. Sementes certificadas passam por rigorosos controles de qualidade, o que minimiza riscos de falha na germinação, contaminação por ervas daninhas ou doenças. A AgroConecta oferece um guia prático e recursos para ajudá-lo a pesquisar e comparar as características das sementes mais adequadas para diversas culturas, garantindo que sua escolha seja a mais assertiva para uma colheita próspera.</p>
-            </div>
-
-            <div class="modal-text-content" id="modal-content-info-manejo-plantas">
-                <h2>Manejo de Plantas: Cuidados Diários para o Desenvolvimento Saudável da Lavoura</h2>
-                <p>O manejo de plantas é um conceito abrangente que engloba todas as práticas e intervenções realizadas ao longo do ciclo de vida da cultura, desde a germinação até a colheita, com o objetivo de otimizar o crescimento, a saúde e a produtividade das lavouras. Não se trata de uma única ação, mas de um conjunto contínuo de cuidados que exigem atenção, conhecimento e adaptabilidade por parte do agricultor.</p>
-                <p>A irrigação adequada é, talvez, a prática de manejo mais fundamental. Saber a quantidade certa de água a ser aplicada e o momento ideal para fazê-lo é crucial. O excesso pode levar ao apodrecimento das raízes e ao lixiviamento de nutrientes, enquanto a falta causa estresse hídrico e perda de produtividade. Monitorar a umidade do solo e observar os sinais das plantas são essenciais, especialmente em regiões como Apucarana, onde a distribuição de chuvas pode ser irregular.</p>
-                <p>Outra prática importante é o controle de plantas daninhas. Ervas invasoras competem com a cultura principal por água, luz e nutrientes, reduzindo significativamente a produção. Métodos de controle podem incluir capina manual, mecânica, uso de herbicidas seletivos (com responsabilidade ambiental) ou, de forma mais sustentável, a utilização de plantas de cobertura que suprimem as daninhas.</p>
-                <p>A poda e o desbaste são técnicas que visam otimizar a distribuição de energia da planta, direcionando-a para o desenvolvimento de frutos ou grãos de maior qualidade. Em algumas culturas, a poda também melhora a aeração e a penetração de luz, prevenindo doenças.</p>
-                <p>O manejo nutricional, baseado na análise de solo, garante que as plantas recebam a dose correta de fertilizantes no momento certo, evitando deficiências ou excessos que podem ser prejudiciais. A identificação precoce de pragas e doenças é vital. O monitoramento constante da lavoura permite que o agricultor perceba os primeiros sinais de problemas e implemente medidas de controle (sejam biológicas, culturais ou químicas) antes que a infestação se espalhe e cause danos irreversíveis.</p>
-                <p>Um manejo eficiente também considera a rotação de culturas e a utilização de culturas de cobertura, que contribuem para a saúde do solo e a resiliência do sistema agrícola. Em última análise, o manejo de plantas é uma arte e uma ciência que exige observação atenta, conhecimento técnico e a capacidade de reagir rapidamente às necessidades da lavoura. Ao dominar essas práticas, o produtor garante plantas mais saudáveis, uma colheita mais farta e um futuro mais próspero para sua propriedade.</p>
-            </div>
-
-            <div class="modal-text-content" id="modal-content-info-clima-previsao">
-                <h2>Clima e Previsão: O Impacto Decisivo no Planejamento e Sucesso da Sua Safra</h2>
-                <p>O clima é, sem dúvida, o fator mais influente e muitas vezes o mais imprevisível na agricultura. Um conhecimento aprofundado das condições climáticas históricas de sua região e, mais importante, das previsões meteorológicas para os próximos dias e semanas, é absolutamente crucial para o planejamento e o sucesso de qualquer safra. A capacidade de antecipar e se adaptar aos fenômenos climáticos pode significar a diferença entre uma colheita recorde e uma perda significativa.</p>
-                <p>Em Apucarana, no Paraná, como em muitas outras regiões agrícolas, as características climáticas locais – incluindo médias de temperatura, padrões de precipitação (chuvas), umidade do ar e a ocorrência de geadas ou ventos fortes – moldam o calendário agrícola. Conhecer o regime hídrico da sua área, por exemplo, permite que você determine as culturas mais adequadas e planeje a irrigação de forma eficiente.</p>
-                <p>As previsões meteorológicas, cada vez mais precisas e localizadas, oferecem um suporte valioso para a tomada de decisões no dia a dia da fazenda. Saber com antecedência sobre a iminência de chuvas fortes pode levar à aceleração da colheita de culturas sensíveis, evitando perdas por umidade excessiva. Da mesma mesma forma, a previsão de um período de seca pode indicar a necessidade de aumentar a frequência da irrigação ou até mesmo atrasar o plantio de culturas mais exigentes em água. A temperatura também é vital: o plantio em dias muito frios ou muito quentes pode afetar a germinação e o desenvolvimento inicial das plântulas.</p>
-                <p>Além das operações de plantio e colheita, o clima influencia diretamente a eficácia de outras práticas de manejo. A aplicação de defensivos agrícolas, por exemplo, deve ser evitada em dias de vento forte ou chuva iminente para prevenir a deriva do produto e garantir sua fixação na planta. A ocorrência de geadas tardias pode exigir medidas de proteção para culturas jovens, enquanto ondas de calor excessivo podem demandar sombreamento ou irrigação extra.</p>
-                <p>A tecnologia atual oferece uma gama de ferramentas para monitoramento climático, desde estações meteorológicas em tempo real na propriedade até aplicativos e sites especializados que fornecem dados e alertas personalizados. A interpretação correta dessas informações, aliada à observação atenta dos sinais da natureza no campo, capacita o agricultor a reagir de forma proativa, minimizando riscos e otimizando o uso de recursos. Em um cenário de mudanças climáticas, estar bem informado sobre o clima e as previsões não é um luxo, mas uma necessidade estratégica para a resiliência e a prosperidade da sua agricultura.</p>
+                <div id="info-clima-previsao-content" class="modal-text-content">
+                    <h2>Clima e Previsão: O Impacto Decisivo no Planejamento e Sucesso da Sua Safra</h2>
+                    <p>O clima é, sem dúvida, o fator mais influente e muitas vezes o mais imprevisível na agricultura. Um conhecimento aprofundado das condições climáticas históricas de sua região e, mais importante, das previsões meteorológicas para os próximos dias e semanas, é absolutamente crucial para o planejamento e o sucesso de qualquer safra. A capacidade de antecipar e se adaptar aos fenômenos climáticos pode significar a diferença entre uma colheita recorde e uma perda significativa.</p>
+                    <p>Em Apucarana, no Paraná, como em muitas outras regiões agrícolas, as características climáticas locais – incluindo médias de temperatura, padrões de precipitação (chuvas), umidade do ar e a ocorrência de geadas ou ventos fortes – moldam o calendário agrícola. Conhecer o regime hídrico da sua área, por exemplo, permite que você determine as culturas mais adequadas e planeje a irrigação de forma eficiente.</p>
+                    <p>As previsões meteorológicas, cada vez mais precisas e localizadas, oferecem um suporte valioso para a tomada de decisões no dia a dia da fazenda. Saber com antecedência sobre a iminência de chuvas fortes pode levar à aceleração da colheita de culturas sensíveis, evitando perdas por umidade excessiva. Da mesma mesma forma, a previsão de um período de seca pode indicar a necessidade de aumentar a frequência da irrigação ou até mesmo atrasar o plantio de culturas mais exigentes em água. A temperatura também é vital: o plantio em dias muito frios ou muito quentes pode afetar a germinação e o desenvolvimento inicial das plântulas.</p>
+                    <p>Além das operações de plantio e colheita, o clima influencia diretamente a eficácia de outras práticas de manejo. A aplicação de defensivos agrícolas, por exemplo, deve ser evitada em dias de vento forte ou chuva iminente para prevenir a deriva do produto e garantir sua fixação na planta. A ocorrência de geadas tardias pode exigir medidas de proteção para culturas jovens, enquanto ondas de calor excessivo podem demandar sombreamento ou irrigação extra.</p>
+                    <p>A tecnologia atual oferece uma gama de ferramentas para monitoramento climático, desde estações meteorológicas em tempo real na propriedade até aplicativos e sites especializados que fornecem dados e alertas personalizados. A interpretação correta dessas informações, aliada à observação atenta dos sinais da natureza no campo, capacita o agricultor a reagir de forma proativa, minimizando riscos e otimizando o uso de recursos. Em um cenário de mudanças climáticas, estar bem informado sobre o clima e as previsões não é um luxo, mas uma necessidade estratégica para a resiliência e a prosperidade da sua agricultura.</p>
             </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript para o Modal
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalOverlay = document.getElementById('modal-overlay');
+            const closeModalButton = document.getElementById('close-modal-button');
+            const modalBody = document.getElementById('modal-body');
+
+            // Pega todos os links que devem abrir o modal
+            const modalTriggers = document.querySelectorAll('.read-more[data-modal-target]');
+
+            // Adiciona um ouvinte de evento de clique para cada gatilho de modal
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (event) => {
+                    event.preventDefault(); // Impede o comportamento padrão do link (rolar a página)
+
+                    const targetId = trigger.getAttribute('data-modal-target');
+                    const targetContent = document.getElementById(targetId);
+
+                    // Oculta todo o conteúdo do modal primeiro para garantir que apenas um seja exibido
+                    document.querySelectorAll('.modal-text-content').forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Exibe o conteúdo específico clicado
+                    if (targetContent) {
+                        targetContent.style.display = 'block';
+                    }
+
+                    // Exibe o overlay e o modal
+                    modalOverlay.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Impede rolagem da página principal
+                });
+            });
+
+            // Fecha o modal ao clicar no botão "X"
+            closeModalButton.addEventListener('click', () => {
+                modalOverlay.style.display = 'none';
+                document.body.style.overflow = ''; // Restaura a rolagem da página principal
+            });
+
+            // Fecha o modal ao clicar fora da área de conteúdo (no overlay)
+            modalOverlay.addEventListener('click', (event) => {
+                // Verifica se o clique foi diretamente no overlay, e não no conteúdo do modal
+                if (event.target === modalOverlay) {
+                    modalOverlay.style.display = 'none';
+                    document.body.style.overflow = ''; // Restaura a rolagem da página principal
+                }
+            });
+        });
+    </script>
 </body>
 </html>
