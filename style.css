@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #CONFIGURAÇÕES GLOBAIS
+\*------------------------------------*/
+
 /* Variáveis de Cores */
 :root {
     --primary-color: #4CAF50; /* Verde Agrícola */
@@ -11,30 +15,43 @@
     --shadow-medium: rgba(0, 0, 0, 0.15);
 }
 
-/* Base Geral */
+/* Reset Básico e Box Model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos de Corpo e Fonte */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
     color: var(--text-color);
     background-color: var(--light-bg);
 }
 
+/* Garante que o scroll-behavior smooth não atrapalhe a navegação interna do modal */
+html {
+    scroll-behavior: auto !important;
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+/* Contêiner de Largura Fixa */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* Padding para Seções */
 .section-padding {
     padding: 60px 0;
 }
 
+/* Títulos de Seção */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -53,6 +70,7 @@ body {
     border-radius: 2px;
 }
 
+/* Botões Gerais */
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -79,22 +97,43 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
-    margin-top: 20px; /* Adicionado para espaçamento */
+    margin-top: 20px;
 }
 
 .btn-small:hover {
     background-color: var(--primary-color);
 }
 
+/* Links "Leia Mais" e "Ver Detalhes" */
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
 
-/* Header */
+.read-more:hover {
+    color: var(--dark-green);
+}
+
+.read-more .fas {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
 .main-header {
     background-color: var(--white);
     padding: 15px 0;
     box-shadow: var(--shadow-light);
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 999; /* Garante que o header fique acima de outros elementos */
 }
 
 .main-header .container {
@@ -135,7 +174,10 @@ body {
     color: var(--primary-color);
 }
 
-/* Hero Section */
+/*------------------------------------*\
+  #HERO SECTION
+\*------------------------------------*/
+
 .hero {
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
     color: var(--white);
@@ -171,7 +213,10 @@ body {
     text-shadow: 1px 1px 3px var(--shadow-medium);
 }
 
-/* Card Grid (Notícias) */
+/*------------------------------------*\
+  #NOTÍCIAS (CARD GRID)
+\*------------------------------------*/
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -214,25 +259,10 @@ body {
     margin-bottom: 20px;
 }
 
-.read-more {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-}
+/*------------------------------------*\
+  #INFORMAÇÕES ESSENCIAIS (INFO GRID)
+\*------------------------------------*/
 
-.read-more:hover {
-    color: var(--dark-green);
-}
-
-.read-more .fas {
-    margin-left: 8px;
-    font-size: 0.9rem;
-}
-
-/* Info Grid */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -279,7 +309,10 @@ body {
     margin-bottom: 15px;
 }
 
-/* Call to Action */
+/*------------------------------------*\
+  #CALL TO ACTION
+\*------------------------------------*/
+
 .call-to-action {
     background-color: var(--primary-color);
     color: var(--white);
@@ -298,7 +331,10 @@ body {
     margin-bottom: 30px;
 }
 
-/* Footer */
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
 .main-footer {
     background-color: var(--dark-green);
     color: var(--white);
@@ -307,7 +343,9 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- MODAL (Pop-up) Styles --- */
+/*------------------------------------*\
+  #MODAL (POP-UP)
+\*------------------------------------*/
 
 /* Overlay que escurece o fundo e centraliza o modal */
 .modal-overlay {
@@ -394,12 +432,11 @@ body {
     }
 }
 
-/* Garante que o scroll-behavior smooth não atrapalhe a navegação interna do modal */
-html {
-    scroll-behavior: auto !important; /* Desativa o smooth scroll para o HTML para que o modal não role a página */
-}
+/*------------------------------------*\
+  #RESPONSIVIDADE
+\*------------------------------------*/
 
-/* Media Queries para Responsividade */
+/* Telas menores que 768px (tablets e celulares) */
 @media (max-width: 768px) {
     .main-header .container {
         flex-direction: column;
@@ -436,6 +473,7 @@ html {
         font-size: 2rem;
     }
 
+    /* Modal responsivo */
     .modal-content {
         width: 95%; /* Ocupa mais largura em telas menores */
         padding: 20px;
@@ -445,20 +483,21 @@ html {
         top: 10px;
         right: 15px;
     }
-    .modal-body h2 { /* Usado .modal-body pois o JavaScript se refere a ele */
+    .modal-body h2 {
         font-size: 1.5rem;
     }
-    .modal-body p { /* Usado .modal-body pois o JavaScript se refere a ele */
+    .modal-body p {
         font-size: 1rem;
     }
 }
 
+/* Telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
     .main-nav ul li {
         margin: 0 10px 10px;
     }
     .main-nav ul li:last-child {
-        margin-left: 0; /* Ajusta o botão de login */
+        margin-left: 0;
     }
     .logo {
         font-size: 1.8rem;
