@@ -1,509 +1,628 @@
-/*------------------------------------*\
-  #CONFIGURAÇÕES GLOBAIS
-\*------------------------------------*/
-
-/* Variáveis de Cores */
+/* Variáveis de Cores Mais Simples e Suaves */
 :root {
-    --primary-color: #4CAF50; /* Verde Agrícola */
-    --secondary-color: #FFC107; /* Amarelo (Destaque) */
-    --dark-green: #388E3C;
-    --light-green: #8BC34A;
+    --primary-color: #6a994e; /* Um verde bonito e natural */
+    --accent-color: #a7c957; /* Um verde mais claro para destaque */
     --text-color: #333;
-    --light-bg: #f5f5f5;
-    --white: #fff;
-    --shadow-light: rgba(0, 0, 0, 0.1);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --light-text-color: #666;
+    --background-color: #f8f8f8; /* Fundo bem claro */
+    --card-background: #ffffff;
+    --border-color: #ddd; /* Borda suave */
+    --header-footer-bg: #4b6b3b; /* Verde mais escuro para cabeçalho/rodapé */
 }
 
-/* Reset Básico e Box Model */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos de Corpo e Fonte */
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte padrão */
-    line-height: 1.6; /* Espaçamento entre linhas */
+    font-family: Arial, sans-serif; /* Fonte simples */
+    line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--light-bg);
+    background-color: var(--background-color);
 }
 
-/* Garante que o scroll-behavior smooth não atrapalhe a navegação interna do modal */
-html {
-    scroll-behavior: auto !important;
-}
-
-/*------------------------------------*\
-  #UTILITIES
-\*------------------------------------*/
-
-/* Contêiner de Largura Fixa */
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Padding para Seções */
-.section-padding {
-    padding: 60px 0;
-}
-
-/* Títulos de Seção */
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--dark-green);
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-color);
-    margin: 15px auto 0;
-    border-radius: 2px;
-}
-
-/* Botões Gerais */
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: var(--dark-green);
-}
-
-.btn-small {
-    display: inline-block;
-    background-color: var(--light-green);
-    color: var(--white);
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-.btn-small:hover {
-    background-color: var(--primary-color);
-}
-
-/* Links "Leia Mais" e "Ver Detalhes" */
-.read-more {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-}
-
-.read-more:hover {
-    color: var(--dark-green);
-}
-
-.read-more .fas {
-    margin-left: 8px;
-    font-size: 0.9rem;
-}
-
-/*------------------------------------*\
-  #HEADER
-\*------------------------------------*/
-
+/* --- Cabeçalho Principal --- */
 .main-header {
-    background-color: var(--white);
+    background-color: var(--header-footer-bg);
+    color: #fff;
     padding: 15px 0;
-    box-shadow: var(--shadow-light);
-    position: sticky;
-    top: 0;
-    z-index: 999; /* Garante que o header fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .main-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
 }
 
 .logo {
     font-size: 2rem;
-    color: var(--primary-color);
+    font-weight: bold;
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
-.logo .fas {
-    margin-right: 10px;
-    color: var(--dark-green);
+.logo i {
+    color: var(--accent-color);
+    font-size: 1.6rem;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-}
-
-.main-nav ul li {
-    margin-left: 30px;
+    gap: 25px;
 }
 
 .main-nav ul li a {
-    color: var(--text-color);
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: normal;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease;
 }
 
 .main-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Botões */
+.btn {
+    background-color: var(--accent-color);
+    color: #fff !important; /* !important para garantir a cor */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #8cbb43; /* Tom ligeiramente mais escuro */
+    transform: translateY(-1px);
+}
+
+.btn-form { /* Botão para formulários */
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Ocupa toda a largura do formulário */
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-form:hover {
+    background-color: #5d873f; /* Tom mais escuro */
+}
+
+.btn-small { /* Botões menores */
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-small:hover {
+    background-color: #5d873f;
+}
+
+.read-more {
     color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+.read-more:hover {
+    color: var(--header-footer-bg);
 }
 
-/*------------------------------------*\
-  #HERO SECTION
-\*------------------------------------*/
 
-.hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    color: var(--white);
+/* --- Seções Comuns --- */
+.section-padding {
+    padding: 60px 0;
     text-align: center;
-    padding: 150px 0;
-    position: relative;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
+.bg-light {
+    background-color: #f2f2f2; /* Um fundo cinza claro */
+}
+
+/* --- Seção Hero --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0; /* Mais padding para maior destaque */
 }
 
 .hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px var(--shadow-medium);
 }
 
 .hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 3px var(--shadow-medium);
-}
-
-/*------------------------------------*\
-  #NOTÍCIAS (CARD GRID)
-\*------------------------------------*/
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px var(--shadow-medium);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.card-content {
-    padding: 25px;
-}
-
-.card-content h4 {
-    font-size: 1.5rem;
-    color: var(--dark-green);
-    margin-bottom: 10px;
-}
-
-.card-content p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/*------------------------------------*\
-  #INFORMAÇÕES ESSENCIAIS (INFO GRID)
-\*------------------------------------*/
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    text-align: center;
-}
-
-.info-item {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px var(--shadow-medium);
-}
-
-.info-item .icon-circle {
-    font-size: 3rem;
-    color: var(--primary-color);
-    background-color: var(--light-green);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
-}
-
-.info-item h4 {
-    font-size: 1.6rem;
-    color: var(--dark-green);
-    margin-bottom: 10px;
-}
-
-.info-item p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/*------------------------------------*\
-  #CALL TO ACTION
-\*------------------------------------*/
-
-.call-to-action {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 80px 0;
-    margin-top: 60px;
-}
-
-.call-to-action h3 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.call-to-action p {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
 
-/*------------------------------------*\
-  #FOOTER
-\*------------------------------------*/
-
-.main-footer {
-    background-color: var(--dark-green);
-    color: var(--white);
-    text-align: center;
-    padding: 25px 0;
-    font-size: 0.9rem;
+/* --- Grid de Cards (Notícias e Plantações) --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
 }
 
-/*------------------------------------*\
-  #MODAL (POP-UP)
-\*------------------------------------*/
-
-/* Overlay que escurece o fundo e centraliza o modal */
-.modal-overlay {
-    display: none; /* Inicialmente oculto, JS vai controlar */
-    position: fixed; /* Fixa na tela */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    overflow-y: auto; /* Permite rolagem dentro do overlay se o conteúdo for muito longo */
-    padding: 20px; /* Padding geral para o overlay */
-    box-sizing: border-box; /* Garante que padding não adicione largura */
-}
-
-/* Conteúdo principal do modal */
-.modal-content {
-    background-color: #fff;
-    padding: 30px;
+.card {
+    background-color: var(--card-background);
     border-radius: 8px;
-    width: 90%; /* Largura do modal */
-    max-width: 800px; /* Largura máxima para telas maiores */
-    position: relative; /* Para posicionar o botão de fechar */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeInScale 0.3s ease-out; /* Animação de entrada */
-    max-height: 90vh; /* Altura máxima para permitir rolagem */
-    overflow-y: auto; /* Adiciona rolagem se o conteúdo for maior que a altura máxima */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-/* Botão de fechar (X) */
-.close-button {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 2.2rem; /* Tamanho maior para o X */
-    font-weight: bold;
-    color: var(--primary-color); /* Cor do botão X */
-    cursor: pointer;
-    line-height: 1; /* Alinha o X */
-    transition: color 0.2s ease-in-out;
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
-.close-button:hover {
-    color: var(--dark-green); /* Cor mais escura ao passar o mouse */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-/* Estilos para o corpo do modal (onde o texto será exibido) */
-.modal-body {
-    padding-top: 10px; /* Espaço para não colidir com o X */
-}
-
-.modal-body h2 {
+.card h4 {
+    font-size: 1.3rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* --- Informações Agrícolas --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.info-item {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 30px 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    line-height: 60px; /* GARANTE CENTRALIZAÇÃO VERTICAL COMPLEMENTAR */
+}
+
+.info-item h4 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* --- Chamada para Ação (Call to Action) --- */
+.call-to-action {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 70px 0;
+    margin-top: 50px;
+}
+
+.call-to-action h3 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* --- Rodapé Principal --- */
+.main-footer {
+    background-color: var(--header-footer-bg);
+    color: #fff;
+    padding: 25px 0;
     text-align: center;
 }
 
-.modal-body p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+/* --- Página de Login --- */
+.login-page-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color); /* Fundo simples */
+    padding: 20px;
+}
+
+.login-container {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-title i {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+}
+
+.login-form .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.login-form .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+}
+
+.form-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Dashboard do Usuário --- */
+.dashboard-main {
+    padding-top: 30px;
+}
+
+.profile-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.user-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.profile-details h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    margin-bottom: 8px;
+    color: var(--light-text-color);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-details p i {
+    color: var(--accent-color);
+}
+
+/* Classe do card "Adicionar Novo Cultivo" */
+.add-new-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--border-color);
+    background-color: #fcfcfc;
+    padding: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-new-card:hover {
+    border-color: var(--primary-color);
+    background-color: #f0f8ed;
+}
+
+.add-new-card .add-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
     margin-bottom: 15px;
+}
+.add-new-card h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+
+/* --- Página de Comunidade (Social) --- */
+.create-post-area {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.post-textarea {
+    width: 100%;
+    min-height: 90px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+.post-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 25px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    border: 2px solid var(--primary-color);
+}
+
+.post-meta h4 {
+    font-size: 1.1rem;
     color: var(--text-color);
-    text-align: justify; /* Justifica o texto para melhor leitura */
+    margin-bottom: 5px;
 }
 
-/* Oculta os conteúdos de texto do modal por padrão */
-.modal-text-content {
-    display: none; /* JS vai controlar a exibição de cada conteúdo */
+.post-meta span {
+    font-size: 0.85rem;
+    color: var(--light-text-color);
 }
 
-/* Animação para o modal */
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.post-card p {
+    margin-bottom: 15px;
 }
 
-/*------------------------------------*\
-  #RESPONSIVIDADE
-\*------------------------------------*/
+.post-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
+    height: auto;
+}
 
-/* Telas menores que 768px (tablets e celulares) */
+.post-interactions {
+    display: flex;
+    gap: 20px;
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.post-interactions span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-interactions span:hover {
+    color: var(--primary-color);
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.member-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 20px;
+    text-align: center;
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.member-card h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    font-size: 0.85rem;
+    color: var(--light-text-color);
+}
+
+/* --- Responsividade --- */
 @media (max-width: 768px) {
     .main-header .container {
         flex-direction: column;
         text-align: center;
     }
-
     .main-nav ul {
         margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
     }
-
-    .main-nav ul li {
-        margin: 0 15px 10px;
+    .main-nav ul li a {
+        padding: 6px 10px;
     }
-
+    .hero {
+        padding: 100px 0;
+    }
     .hero-content h2 {
         font-size: 2.5rem;
     }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .card-grid, .info-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-    }
-
     .section-title {
         font-size: 2rem;
     }
-
-    .call-to-action h3 {
-        font-size: 2rem;
+    .card-grid, .info-grid, .members-grid {
+        grid-template-columns: 1fr;
     }
-
-    /* Modal responsivo */
-    .modal-content {
-        width: 95%; /* Ocupa mais largura em telas menores */
+    .profile-card {
         padding: 20px;
     }
-    .close-button {
-        font-size: 1.8rem;
-        top: 10px;
-        right: 15px;
+    .user-avatar {
+        width: 100px;
+        height: 100px;
     }
-    .modal-body h2 {
-        font-size: 1.5rem;
-    }
-    .modal-body p {
-        font-size: 1rem;
+    .post-interactions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 }
 
-/* Telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
-    .main-nav ul li {
-        margin: 0 10px 10px;
-    }
-    .main-nav ul li:last-child {
-        margin-left: 0;
-    }
     .logo {
         font-size: 1.8rem;
     }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
     .btn {
-        padding: 10px 20px;
+        padding: 8px 15px;
         font-size: 0.9rem;
+    }
+    .login-container {
+        padding: 30px;
+    }
+    .login-title {
+        font-size: 1.8rem;
     }
 }
