@@ -29,7 +29,7 @@
                 <h2 class="section-title">Comunidade AgroConecta</h2>
                 <div class="create-post-area">
                     <textarea placeholder="Compartilhe uma ideia ou pergunta..." class="post-textarea"></textarea>
-                    <button class="btn-form">Publicar <i class="fas fa-paper-plane"></i></button>
+                    <button class="btn-form" onclick="showNotification('Postagem publicada com sucesso!')">Publicar <i class="fas fa-paper-plane"></i></button>
                 </div>
 
                 <div class="post-stream">
@@ -72,5 +72,22 @@
             <p>&copy; 2025 AgroConecta. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script>
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = 'notification ' + type + ' show'; // Adiciona classe 'show' e tipo
+
+            setTimeout(() => {
+                notification.className = 'notification ' + type; // Remove 'show' para iniciar fade-out
+                setTimeout(() => {
+                    notification.className = 'notification'; // Reseta a classe após a transição
+                }, 500); // Tempo da transição CSS
+            }, 3000); // Notificação visível por 3 segundos
+        }
+    </script>
 </body>
 </html>
