@@ -283,7 +283,7 @@ html {
 
 .icon-circle i {
     position: relative; /* Habilita o posicionamento relativo para o ícone */
-    top: 25px; /* Move o ícone 5 pixels para baixo DENTRO do círculo */
+    top: 50px; /* Move o ícone 5 pixels para baixo DENTRO do círculo */
 }
 
 .info-item h4 {
