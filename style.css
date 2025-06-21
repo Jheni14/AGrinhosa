@@ -278,11 +278,15 @@ html {
     align-items: center;
     font-size: 2rem;
     line-height: 1;
-    margin: 0 auto 20px; /* Mantém a centralização horizontal e a margem inferior */
+    margin: 0 auto 20px;
+    /* REMOVA ESTAS LINHAS SE TIVER ADICIONADO: */
+    /* position: relative; */
+    /* top: 5px; */
+}
 
-    /* --- ADICIONE OU MODIFIQUE ESTAS DUAS LINHAS --- */
-    position: relative; /* Habilita o uso de 'top', 'bottom', 'left', 'right' */
-    top: 0px; /* Move o ícone 5 pixels para baixo */
+.icon-circle i {
+    position: relative; /* Habilita o posicionamento relativo para o ícone */
+    top: 5px; /* Move o ícone 5 pixels para baixo DENTRO do círculo */
 }
 
 .info-item h4 {
@@ -290,7 +294,6 @@ html {
     color: var(--primary-color);
     margin-bottom: 10px;
 }
-
 .info-item p {
     font-size: 0.9rem;
     color: var(--light-text-color);
