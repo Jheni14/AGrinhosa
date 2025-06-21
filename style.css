@@ -27,6 +27,8 @@ body {
     line-height: 1.6; /* Espaçamento entre linhas */
     color: var(--text-color);
     background-color: var(--background-color);
+    /* Adicionado para controlar o scroll do corpo */
+    overflow-y: scroll; /* Sempre mostra a barra de rolagem para evitar "saltos" */
 }
 
 /* Garante que o scroll-behavior smooth não atrapalhe a navegação interna do modal */
@@ -272,11 +274,11 @@ html {
     color: #fff;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    align-items: center; /* Centraliza o ícone verticalmente */
     font-size: 2rem;
     margin: 0 auto 20px;
-    line-height: 60px; /* GARANTE CENTRALIZAÇÃO VERTICAL COMPLEMENTAR */
+    /* line-height: 60px; Removido, align-items já faz o trabalho */
 }
 
 .info-item h4 {
