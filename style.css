@@ -262,12 +262,11 @@ html {
     align-items: center;
     font-size: 2rem;
     line-height: 1;
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
 }
 
 .icon-circle i {
-    position: relative;
-    top: 50px;
+    transform: translateY(25px);
 }
 
 .info-item h4 {
