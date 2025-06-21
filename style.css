@@ -1,37 +1,31 @@
 /*------------------------------------*\
   #CONFIGURAÇÕES GLOBAIS
 \*------------------------------------*/
-
-/* Variáveis de Cores Mais Simples e Suaves */
 :root {
-    --primary-color: #6a994e; /* Um verde bonito e natural */
-    --accent-color: #a7c957; /* Um verde mais claro para destaque */
+    --primary-color: #6a994e;
+    --accent-color: #a7c957;
     --text-color: #333;
     --light-text-color: #666;
-    --background-color: #f8f8f8; /* Fundo bem claro */
+    --background-color: #f8f8f8;
     --card-background: #ffffff;
-    --border-color: #ddd; /* Borda suave */
-    --header-footer-bg: #4b6b3b; /* Verde mais escuro para cabeçalho/rodapé */
+    --border-color: #ddd;
+    --header-footer-bg: #4b6b3b;
 }
 
-/* Reset Básico e Box Model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos de Corpo e Fonte */
 body {
-    font-family: Arial, sans-serif; /* Fonte simples */
-    line-height: 1.6; /* Espaçamento entre linhas */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    /* Adicionado para controlar o scroll do corpo */
-    overflow-y: scroll; /* Sempre mostra a barra de rolagem para evitar "saltos" */
+    overflow-y: scroll;
 }
 
-/* Garante que o scroll-behavior smooth não atrapalhe a navegação interna do modal */
 html {
     scroll-behavior: auto !important;
 }
@@ -39,21 +33,17 @@ html {
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
-
-/* Contêiner de Largura Fixa */
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Padding para Seções */
 .section-padding {
     padding: 60px 0;
     text-align: center;
 }
 
-/* Títulos de Seção */
 .section-title {
     font-size: 2.5rem;
     color: var(--primary-color);
@@ -61,13 +51,12 @@ html {
 }
 
 .bg-light {
-    background-color: #f2f2f2; /* Um fundo cinza claro */
+    background-color: #f2f2f2;
 }
 
-/* Botões Gerais */
 .btn {
     background-color: var(--accent-color);
-    color: #fff !important; /* !important para garantir a cor */
+    color: #fff !important;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -80,27 +69,27 @@ html {
 }
 
 .btn:hover {
-    background-color: #8cbb43; /* Tom ligeiramente mais escuro */
+    background-color: #8cbb43;
     transform: translateY(-1px);
 }
 
-.btn-form { /* Botão para formulários */
+.btn-form {
     background-color: var(--primary-color);
     color: #fff;
     padding: 12px 25px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    width: 100%; /* Ocupa toda a largura do formulário */
+    width: 100%;
     font-size: 1.1rem;
     transition: background-color 0.2s ease;
 }
 
 .btn-form:hover {
-    background-color: #5d873f; /* Tom mais escuro */
+    background-color: #5d873f;
 }
 
-.btn-small { /* Botões menores */
+.btn-small {
     padding: 8px 15px;
     font-size: 0.9rem;
     border-radius: 4px;
@@ -114,7 +103,6 @@ html {
     background-color: #5d873f;
 }
 
-/* Links "Leia Mais" e "Ver Detalhes" */
 .read-more {
     color: var(--primary-color);
     text-decoration: none;
@@ -131,7 +119,6 @@ html {
 /*------------------------------------*\
   #HEADER
 \*------------------------------------*/
-
 .main-header {
     background-color: var(--header-footer-bg);
     color: #fff;
@@ -143,7 +130,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -181,12 +168,11 @@ html {
 /*------------------------------------*\
   #HERO SECTION (INDEX.HTML)
 \*------------------------------------*/
-
 .hero {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 150px 0; /* Mais padding para maior destaque */
+    padding: 150px 0;
 }
 
 .hero-content h2 {
@@ -202,7 +188,6 @@ html {
 /*------------------------------------*\
   #CARD GRID (NOTÍCIAS E PLANTAÇÕES)
 \*------------------------------------*/
-
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -250,7 +235,6 @@ html {
 /*------------------------------------*\
   #INFORMAÇÕES AGRÍCOLAS (INFO GRID)
 \*------------------------------------*/
-
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -282,8 +266,8 @@ html {
 }
 
 .icon-circle i {
-    position: relative; /* Habilita o posicionamento relativo para o ícone */
-    top: 50px; /* Move o ícone 5 pixels para baixo DENTRO do círculo */
+    position: relative;
+    top: 5px;
 }
 
 .info-item h4 {
@@ -291,6 +275,7 @@ html {
     color: var(--primary-color);
     margin-bottom: 10px;
 }
+
 .info-item p {
     font-size: 0.9rem;
     color: var(--light-text-color);
@@ -301,13 +286,12 @@ html {
 /*------------------------------------*\
   #CALL TO ACTION
 \*------------------------------------*/
-
 .call-to-action {
     background-color: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 70px 0;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .call-to-action h3 {
@@ -323,7 +307,6 @@ html {
 /*------------------------------------*\
   #FOOTER
 \*------------------------------------*/
-
 .main-footer {
     background-color: var(--header-footer-bg);
     color: #fff;
@@ -334,58 +317,53 @@ html {
 /*------------------------------------*\
   #MODAL (POP-UP)
 \*------------------------------------*/
-
-/* Overlay que escurece o fundo e centraliza o modal */
 .modal-overlay {
-    display: none; /* Inicialmente oculto, JS vai controlar */
-    position: fixed; /* Fixa na tela */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    overflow-y: auto; /* Permite rolagem dentro do overlay se o conteúdo for muito longo */
-    padding: 20px; /* Padding geral para o overlay */
-    box-sizing: border-box; /* Garante que padding não adicione largura */
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Conteúdo principal do modal */
 .modal-content {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    width: 90%; /* Largura do modal */
-    max-width: 800px; /* Largura máxima para telas maiores */
-    position: relative; /* Para posicionar o botão de fechar */
+    width: 90%;
+    max-width: 800px;
+    position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeInScale 0.3s ease-out; /* Animação de entrada */
-    max-height: 90vh; /* Altura máxima para permitir rolagem */
-    overflow-y: auto; /* Adiciona rolagem se o conteúdo for maior que a altura máxima */
+    animation: fadeInScale 0.3s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-/* Botão de fechar (X) */
 .close-button {
     position: absolute;
     top: 15px;
     right: 25px;
-    font-size: 2.2rem; /* Tamanho maior para o X */
+    font-size: 2.2rem;
     font-weight: bold;
-    color: var(--primary-color); /* Cor do botão X */
+    color: var(--primary-color);
     cursor: pointer;
-    line-height: 1; /* Alinha o X */
+    line-height: 1;
     transition: color 0.2s ease-in-out;
 }
 
 .close-button:hover {
-    color: var(--header-footer-bg); /* Cor mais escura ao passar o mouse */
+    color: var(--header-footer-bg);
 }
 
-/* Estilos para o corpo do modal (onde o texto será exibido) */
 .modal-body {
-    padding-top: 10px; /* Espaço para não colidir com o X */
+    padding-top: 10px;
 }
 
 .modal-body h2 {
@@ -400,15 +378,13 @@ html {
     line-height: 1.7;
     margin-bottom: 15px;
     color: var(--text-color);
-    text-align: justify; /* Justifica o texto para melhor leitura */
+    text-align: justify;
 }
 
-/* Oculta os conteúdos de texto do modal por padrão */
 .modal-text-content {
-    display: none; /* JS vai controlar a exibição de cada conteúdo */
+    display: none;
 }
 
-/* Animação para o modal */
 @keyframes fadeInScale {
     from {
         opacity: 0;
@@ -423,13 +399,12 @@ html {
 /*------------------------------------*\
   #PÁGINA DE LOGIN (LOGIN.HTML)
 \*------------------------------------*/
-
 .login-page-body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--background-color); /* Fundo simples */
+    background-color: var(--background-color);
     padding: 20px;
 }
 
@@ -497,7 +472,6 @@ html {
 /*------------------------------------*\
   #DASHBOARD DO USUÁRIO (DASHBOARD.HTML)
 \*------------------------------------*/
-
 .dashboard-main {
     padding-top: 30px;
 }
@@ -542,7 +516,6 @@ html {
     color: var(--accent-color);
 }
 
-/* Classe do card "Adicionar Novo Cultivo" */
 .add-new-card {
     display: flex;
     flex-direction: column;
@@ -573,7 +546,6 @@ html {
 /*------------------------------------*\
   #PÁGINA DE COMUNIDADE (SOCIAL.HTML)
 \*------------------------------------*/
-
 .social-main {
     padding-top: 30px;
 }
@@ -732,25 +704,21 @@ html {
     visibility: visible;
 }
 
-/* Tipos de notificação (opcional) */
 .notification.success {
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50;
 }
 
 .notification.error {
-    background-color: #f44336; /* Vermelho */
+    background-color: #f44336;
 }
 
 .notification.warning {
-    background-color: #ff9800; /* Laranja */
+    background-color: #ff9800;
 }
-
 
 /*------------------------------------*\
   #RESPONSIVIDADE
 \*------------------------------------*/
-
-/* Telas menores que 768px (tablets e celulares) */
 @media (max-width: 768px) {
     .main-header .container {
         flex-direction: column;
@@ -788,9 +756,8 @@ html {
         align-items: flex-start;
         gap: 8px;
     }
-    /* Modal responsivo */
     .modal-content {
-        width: 95%; /* Ocupa mais largura em telas menores */
+        width: 95%;
         padding: 20px;
     }
     .close-button {
@@ -806,7 +773,6 @@ html {
     }
 }
 
-/* Telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
     .logo {
         font-size: 1.8rem;
