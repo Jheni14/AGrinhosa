@@ -282,7 +282,7 @@ html {
 
     /* --- ADICIONE OU MODIFIQUE ESTAS DUAS LINHAS --- */
     position: relative; /* Habilita o uso de 'top', 'bottom', 'left', 'right' */
-    top: 50px; /* Move o ícone 5 pixels para baixo */
+    top: 0px; /* Move o ícone 5 pixels para baixo */
 }
 
 .info-item h4 {
