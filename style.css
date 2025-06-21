@@ -257,16 +257,18 @@ html {
     background-color: var(--primary-color);
     color: #fff;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2rem;
     line-height: 1;
     margin: 0 auto 20px;
+    position: relative;
+    display: block;
 }
 
 .icon-circle i {
-    transform: translateY(433px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 5px));
 }
 
 .info-item h4 {
