@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #CONFIGURAÇÕES GLOBAIS
+\*------------------------------------*/
+
 /* Variáveis de Cores Mais Simples e Suaves */
 :root {
     --primary-color: #6a994e; /* Um verde bonito e natural */
@@ -10,74 +14,55 @@
     --header-footer-bg: #4b6b3b; /* Verde mais escuro para cabeçalho/rodapé */
 }
 
-/* Reset Básico */
+/* Reset Básico e Box Model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos de Corpo e Fonte */
 body {
     font-family: Arial, sans-serif; /* Fonte simples */
-    line-height: 1.6;
+    line-height: 1.6; /* Espaçamento entre linhas */
     color: var(--text-color);
     background-color: var(--background-color);
 }
 
+/* Garante que o scroll-behavior smooth não atrapalhe a navegação interna do modal */
+html {
+    scroll-behavior: auto !important;
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+/* Contêiner de Largura Fixa */
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- Cabeçalho Principal --- */
-.main-header {
-    background-color: var(--header-footer-bg);
-    color: #fff;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Padding para Seções */
+.section-padding {
+    padding: 60px 0;
+    text-align: center;
 }
 
-.main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Permite quebrar em telas menores */
+/* Títulos de Seção */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.bg-light {
+    background-color: #f2f2f2; /* Um fundo cinza claro */
 }
 
-.logo i {
-    color: var(--accent-color);
-    font-size: 1.6rem;
-}
-
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.main-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: normal;
-    padding: 8px 12px;
-    transition: background-color 0.2s ease;
-}
-
-.main-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-}
-
-/* Botões */
+/* Botões Gerais */
 .btn {
     background-color: var(--accent-color);
     color: #fff !important; /* !important para garantir a cor */
@@ -127,6 +112,7 @@ body {
     background-color: #5d873f;
 }
 
+/* Links "Leia Mais" e "Ver Detalhes" */
 .read-more {
     color: var(--primary-color);
     text-decoration: none;
@@ -140,24 +126,60 @@ body {
     color: var(--header-footer-bg);
 }
 
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
 
-/* --- Seções Comuns --- */
-.section-padding {
-    padding: 60px 0;
-    text-align: center;
+.main-header {
+    background-color: var(--header-footer-bg);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.section-title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
 }
 
-.bg-light {
-    background-color: #f2f2f2; /* Um fundo cinza claro */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* --- Seção Hero --- */
+.logo i {
+    color: var(--accent-color);
+    font-size: 1.6rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/*------------------------------------*\
+  #HERO SECTION (INDEX.HTML)
+\*------------------------------------*/
+
 .hero {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
@@ -175,7 +197,10 @@ body {
     margin-bottom: 30px;
 }
 
-/* --- Grid de Cards (Notícias e Plantações) --- */
+/*------------------------------------*\
+  #CARD GRID (NOTÍCIAS E PLANTAÇÕES)
+\*------------------------------------*/
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -220,7 +245,10 @@ body {
     flex-grow: 1;
 }
 
-/* --- Informações Agrícolas --- */
+/*------------------------------------*\
+  #INFORMAÇÕES AGRÍCOLAS (INFO GRID)
+\*------------------------------------*/
+
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -264,7 +292,10 @@ body {
     flex-grow: 1;
 }
 
-/* --- Chamada para Ação (Call to Action) --- */
+/*------------------------------------*\
+  #CALL TO ACTION
+\*------------------------------------*/
+
 .call-to-action {
     background-color: var(--primary-color);
     color: #fff;
@@ -283,7 +314,10 @@ body {
     margin-bottom: 30px;
 }
 
-/* --- Rodapé Principal --- */
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
 .main-footer {
     background-color: var(--header-footer-bg);
     color: #fff;
@@ -291,7 +325,99 @@ body {
     text-align: center;
 }
 
-/* --- Página de Login --- */
+/*------------------------------------*\
+  #MODAL (POP-UP)
+\*------------------------------------*/
+
+/* Overlay que escurece o fundo e centraliza o modal */
+.modal-overlay {
+    display: none; /* Inicialmente oculto, JS vai controlar */
+    position: fixed; /* Fixa na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    overflow-y: auto; /* Permite rolagem dentro do overlay se o conteúdo for muito longo */
+    padding: 20px; /* Padding geral para o overlay */
+    box-sizing: border-box; /* Garante que padding não adicione largura */
+}
+
+/* Conteúdo principal do modal */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%; /* Largura do modal */
+    max-width: 800px; /* Largura máxima para telas maiores */
+    position: relative; /* Para posicionar o botão de fechar */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInScale 0.3s ease-out; /* Animação de entrada */
+    max-height: 90vh; /* Altura máxima para permitir rolagem */
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo for maior que a altura máxima */
+}
+
+/* Botão de fechar (X) */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2.2rem; /* Tamanho maior para o X */
+    font-weight: bold;
+    color: var(--primary-color); /* Cor do botão X */
+    cursor: pointer;
+    line-height: 1; /* Alinha o X */
+    transition: color 0.2s ease-in-out;
+}
+
+.close-button:hover {
+    color: var(--header-footer-bg); /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para o corpo do modal (onde o texto será exibido) */
+.modal-body {
+    padding-top: 10px; /* Espaço para não colidir com o X */
+}
+
+.modal-body h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    text-align: justify; /* Justifica o texto para melhor leitura */
+}
+
+/* Oculta os conteúdos de texto do modal por padrão */
+.modal-text-content {
+    display: none; /* JS vai controlar a exibição de cada conteúdo */
+}
+
+/* Animação para o modal */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*------------------------------------*\
+  #PÁGINA DE LOGIN (LOGIN.HTML)
+\*------------------------------------*/
+
 .login-page-body {
     display: flex;
     justify-content: center;
@@ -362,7 +488,10 @@ body {
     text-decoration: underline;
 }
 
-/* --- Dashboard do Usuário --- */
+/*------------------------------------*\
+  #DASHBOARD DO USUÁRIO (DASHBOARD.HTML)
+\*------------------------------------*/
+
 .dashboard-main {
     padding-top: 30px;
 }
@@ -435,8 +564,14 @@ body {
     font-size: 1.2rem;
 }
 
+/*------------------------------------*\
+  #PÁGINA DE COMUNIDADE (SOCIAL.HTML)
+\*------------------------------------*/
 
-/* --- Página de Comunidade (Social) --- */
+.social-main {
+    padding-top: 30px;
+}
+
 .create-post-area {
     background-color: var(--card-background);
     border-radius: 10px;
@@ -565,7 +700,51 @@ body {
     color: var(--light-text-color);
 }
 
-/* --- Responsividade --- */
+/*------------------------------------*\
+  #NOTIFICAÇÕES
+\*------------------------------------*/
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    z-index: 1000;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tipos de notificação (opcional) */
+.notification.success {
+    background-color: #4CAF50; /* Verde */
+}
+
+.notification.error {
+    background-color: #f44336; /* Vermelho */
+}
+
+.notification.warning {
+    background-color: #ff9800; /* Laranja */
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVIDADE
+\*------------------------------------*/
+
+/* Telas menores que 768px (tablets e celulares) */
 @media (max-width: 768px) {
     .main-header .container {
         flex-direction: column;
@@ -603,8 +782,25 @@ body {
         align-items: flex-start;
         gap: 8px;
     }
+    /* Modal responsivo */
+    .modal-content {
+        width: 95%; /* Ocupa mais largura em telas menores */
+        padding: 20px;
+    }
+    .close-button {
+        font-size: 1.8rem;
+        top: 10px;
+        right: 15px;
+    }
+    .modal-body h2 {
+        font-size: 1.5rem;
+    }
+    .modal-body p {
+        font-size: 1rem;
+    }
 }
 
+/* Telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
     .logo {
         font-size: 1.8rem;
