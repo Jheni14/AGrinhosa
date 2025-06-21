@@ -273,12 +273,12 @@ html {
     background-color: var(--primary-color);
     color: #fff;
     border-radius: 50%;
-    display: flex;
-    justify-content: center; /* Centraliza o ícone horizontalmente */
-    align-items: center; /* Centraliza o ícone verticalmente */
+    display: flex; /* Transforma em flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     font-size: 2rem;
     margin: 0 auto 20px;
-    /* line-height: 60px; Removido, align-items já faz o trabalho */
+    line-height: 1; /* Garante que o ícone não tenha altura extra por line-height padrão */
 }
 
 .info-item h4 {
