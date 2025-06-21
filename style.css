@@ -279,14 +279,11 @@ html {
     font-size: 2rem;
     line-height: 1;
     margin: 0 auto 20px;
-    /* REMOVA ESTAS LINHAS SE TIVER ADICIONADO: */
-    /* position: relative; */
-    /* top: 5px; */
 }
 
 .icon-circle i {
     position: relative; /* Habilita o posicionamento relativo para o ícone */
-    top: 5px; /* Move o ícone 5 pixels para baixo DENTRO do círculo */
+    top: 25px; /* Move o ícone 5 pixels para baixo DENTRO do círculo */
 }
 
 .info-item h4 {
