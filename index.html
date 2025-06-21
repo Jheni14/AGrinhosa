@@ -164,11 +164,13 @@
             });
             document.getElementById(contentId + '-content').style.display = 'block'; // Mostra o conteúdo específico
             document.getElementById('modalOverlay').style.display = 'flex'; // Exibe o overlay do modal
+            document.body.style.overflow = 'hidden'; // Impede o scroll do corpo
         }
 
         // Função para fechar o modal
         function closeModal() {
             document.getElementById('modalOverlay').style.display = 'none'; // Oculta o overlay do modal
+            document.body.style.overflow = 'scroll'; // Restaura o scroll do corpo
         }
 
         // Fecha o modal se clicar fora do conteúdo
