@@ -273,12 +273,27 @@ html {
     background-color: var(--primary-color);
     color: #fff;
     border-radius: 50%;
-    display: flex; /* Transforma em flex container */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
-    margin: 0 auto 20px;
-    line-height: 1; /* Garante que o ícone não tenha altura extra por line-height padrão */
+    line-height: 1;
+
+    /* --- AJUSTE AQUI PARA AS COORDENADAS --- */
+    /* Exemplo: Remover a centralização automática e definir margens específicas */
+    /* REMOVA: margin: 0 auto 20px; */
+
+    /* ADICIONE UMA DESTAS OPÇÕES: */
+
+    /* Exemplo 1A: Margens fixas (mais comum para ajustar o espaço) */
+    /* top, right, bottom, left */
+    margin: 10px 20px 30px 40px; /* Altere estes valores conforme a sua necessidade */
+
+    /* Exemplo 1B: Margem superior e inferior, com margem lateral automática para centralizar E com ajuste horizontal */
+    margin: 0 auto 20px; /* Mantém a centralização horizontal */
+    position: relative; /* Essencial para 'left' ou 'right' funcionarem sem afetar o fluxo */
+    left: 5px; /* Mover 5px para a direita em relação à sua posição centralizada */
+    /* top: -10px; */ /* Mover 10px para cima */
 }
 
 .info-item h4 {
