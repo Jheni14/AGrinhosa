@@ -288,7 +288,7 @@ html {
 }
 
 .info-item p {
-    font-size: 0.9rem;
+    font-size: 2.9rem;
     color: var(--light-text-color);
     margin-bottom: 15px;
     flex-grow: 1;
@@ -307,7 +307,7 @@ html {
 }
 
 .call-to-action h3 {
-    font-size: 0.8rem;
+    font-size: 2.8rem;
     margin-bottom: 15px;
 }
 
