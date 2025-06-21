@@ -228,7 +228,7 @@ html {
 }
 
 .card-content {
-    padding: 80px;
+    padding: 500px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
