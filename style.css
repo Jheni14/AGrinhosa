@@ -278,22 +278,11 @@ html {
     align-items: center;
     font-size: 2rem;
     line-height: 1;
+    margin: 0 auto 20px; /* Mantém a centralização horizontal e a margem inferior */
 
-    /* --- AJUSTE AQUI PARA AS COORDENADAS --- */
-    /* Exemplo: Remover a centralização automática e definir margens específicas */
-    /* REMOVA: margin: 0 auto 20px; */
-
-    /* ADICIONE UMA DESTAS OPÇÕES: */
-
-    /* Exemplo 1A: Margens fixas (mais comum para ajustar o espaço) */
-    /* top, right, bottom, left */
-    margin: 10px 20px 30px 40px; /* Altere estes valores conforme a sua necessidade */
-
-    /* Exemplo 1B: Margem superior e inferior, com margem lateral automática para centralizar E com ajuste horizontal */
-    margin: 0 auto 20px; /* Mantém a centralização horizontal */
-    position: relative; /* Essencial para 'left' ou 'right' funcionarem sem afetar o fluxo */
-    left: 5px; /* Mover 5px para a direita em relação à sua posição centralizada */
-    /* top: -10px; */ /* Mover 10px para cima */
+    /* --- ADICIONE OU MODIFIQUE ESTAS DUAS LINHAS --- */
+    position: relative; /* Habilita o uso de 'top', 'bottom', 'left', 'right' */
+    top: 5px; /* Move o ícone 5 pixels para baixo */
 }
 
 .info-item h4 {
