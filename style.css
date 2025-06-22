@@ -251,22 +251,20 @@ html {
     height: 100%;
 }
 
-/* MODIFICAÇÃO APLICADA AQUI PARA USAR SUAS IMAGENS PNG */
-.info-item-icon { /* Esta é a classe que você adicionou nas tags <img> no HTML */
-    width: 60px; /* Adapte o tamanho para sua imagem. Originalmente era para ícone, mas funciona bem para imagens pequenas */
-    height: 60px; /* Garante que a altura seja igual à largura para um círculo perfeito */
-    border-radius: 50%; /* Torna a imagem circular */
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
-    margin: 0 auto 20px; /* Centraliza a imagem e adiciona margem inferior */
-    background-color: var(--primary-color); /* Adiciona uma cor de fundo ao círculo, útil se a imagem tiver transparência */
-    padding: 5px; /* Ajuste o padding se necessário para o visual da sua imagem dentro do círculo */
-    display: block; /* Para garantir que o margin: auto funcione para centralizar */
+/* ESTILO MODIFICADO PARA AS IMAGENS FICAREM 3X MAIORES */
+.info-item-icon {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    background-color: var(--primary-color);
+    padding: 5px; /* Ajuste este padding se a imagem grande precisar de mais ou menos espaço dentro do círculo */
+    display: block;
 }
 
-/* Se você ainda tiver a classe .icon-circle e não for mais usá-la, pode remover ou comentar: */
 .icon-circle {
-    display: none; /* Oculta os ícones Font Awesome se você os substituiu por imagens */
-    /* Caso contrário, se ainda usar Font Awesome em outros lugares, mantenha este estilo se quiser que eles apareçam */
+    display: none; /* Mantido para ocultar os antigos ícones Font Awesome */
 }
 
 
@@ -744,6 +742,13 @@ html {
     .card-grid, .info-grid, .members-grid {
         grid-template-columns: 1fr;
     }
+    /* Ajuste para as imagens maiores em telas menores, se necessário */
+    .info-item-icon {
+        width: 120px; /* Reduz um pouco em telas menores para não quebrar o layout */
+        height: 120px;
+        margin-bottom: 15px; /* Ajuste a margem se precisar de mais espaço */
+    }
+
     .profile-card {
         padding: 20px;
     }
@@ -792,6 +797,11 @@ html {
     }
     .login-title {
         font-size: 1.8rem;
+    }
+    /* Ajuste adicional para as imagens em telas muito pequenas, se necessário */
+    .info-item-icon {
+        width: 100px; /* Ajuste ainda mais para telas muito pequenas */
+        height: 100px;
     }
   }
   
