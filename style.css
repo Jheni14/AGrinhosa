@@ -253,8 +253,8 @@ html {
 
 /* ESTILO MODIFICADO PARA AS IMAGENS FICAREM 3X MAIORES */
 .info-item-icon {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 20px;
