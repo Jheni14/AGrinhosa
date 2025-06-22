@@ -83,6 +83,11 @@ html {
     width: 100%;
     font-size: 1.1rem;
     transition: background-color 0.2s ease;
+    text-decoration: none; /* Adicionado para compatibilidade com <a> */
+    display: inline-flex; /* Adicionado para alinhar ícone */
+    align-items: center; /* Adicionado para alinhar ícone */
+    justify-content: center; /* Adicionado para centralizar conteúdo */
+    gap: 8px; /* Adicionado para espaçamento do ícone */
 }
 
 .btn-form:hover {
@@ -251,7 +256,6 @@ html {
     height: 100%;
 }
 
-/* ESTILO MODIFICADO PARA AS IMAGENS FICAREM 3X MAIORES */
 .info-item-icon {
     width: 120px;
     height: 120px;
@@ -259,14 +263,13 @@ html {
     object-fit: cover;
     margin: 0 auto 20px;
     background-color: var(--primary-color);
-    padding: 5px; /* Ajuste este padding se a imagem grande precisar de mais ou menos espaço dentro do círculo */
+    padding: 5px;
     display: block;
 }
 
 .icon-circle {
-    display: none; /* Mantido para ocultar os antigos ícones Font Awesome */
+    display: none;
 }
-
 
 .info-item h4 {
     font-size: 1.15rem;
@@ -332,7 +335,7 @@ html {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: var(--card-background);
     padding: 30px;
     border-radius: 8px;
     width: 90%;
@@ -676,8 +679,40 @@ html {
     color: var(--light-text-color);
 }
 
+/* Estilos para o post via :target no social.html */
+.post-card.target-hidden {
+    display: none;
+    position: relative;
+    border: 2px solid var(--primary-color);
+}
+
+.post-card.target-hidden:target {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-target-post {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.close-target-post:hover {
+    color: var(--text-color);
+}
+
+
 /*------------------------------------*\
-  #NOTIFICAÇÕES
+  #NOTIFICAÇÕES (Se JavaScript for usado)
 \*------------------------------------*/
 .notification {
     position: fixed;
@@ -742,11 +777,10 @@ html {
     .card-grid, .info-grid, .members-grid {
         grid-template-columns: 1fr;
     }
-    /* Ajuste para as imagens maiores em telas menores, se necessário */
     .info-item-icon {
-        width: 120px; /* Reduz um pouco em telas menores para não quebrar o layout */
+        width: 120px;
         height: 120px;
-        margin-bottom: 15px; /* Ajuste a margem se precisar de mais espaço */
+        margin-bottom: 15px;
     }
 
     .profile-card {
@@ -798,10 +832,9 @@ html {
     .login-title {
         font-size: 1.8rem;
     }
-    /* Ajuste adicional para as imagens em telas muito pequenas, se necessário */
     .info-item-icon {
-        width: 100px; /* Ajuste ainda mais para telas muito pequenas */
+        width: 100px;
         height: 100px;
     }
   }
-  
+      
