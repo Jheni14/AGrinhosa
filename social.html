@@ -29,10 +29,26 @@
                 <h2 class="section-title">Comunidade AgroConecta</h2>
                 <div class="create-post-area">
                     <textarea placeholder="Compartilhe uma ideia ou pergunta..." class="post-textarea"></textarea>
-                    <button class="btn-form" onclick="showNotification('Postagem publicada com sucesso!')">Publicar <i class="fas fa-paper-plane"></i></button>
+                    <a href="#new-target-post" class="btn-form">Publicar <i class="fas fa-paper-plane"></i></a>
                 </div>
 
                 <div class="post-stream">
+                    <div id="new-target-post" class="post-card target-hidden">
+                        <a href="#" class="close-target-post">&times;</a>
+                        <div class="post-header">
+                            <img src="images/user_placeholder.png" alt="Usuário Novo" class="post-avatar">
+                            <div class="post-meta">
+                                <h4>Usuário Novo</h4>
+                                <span>Recentemente</span>
+                            </div>
+                        </div>
+                        <p>Esta é uma postagem de demonstração que aparece via HTML/CSS.</p>
+                        <div class="post-interactions">
+                            <span><i class="fas fa-heart"></i> 0 Curtidas</span>
+                            <span><i class="fas fa-comment-alt"></i> 0 Comentários</span>
+                        </div>
+                    </div>
+
                     <div class="post-card">
                         <div class="post-header">
                             <img src="images/user1.png" alt="Avatar Usuário 1" class="post-avatar">
@@ -72,22 +88,5 @@
             <p>&copy; 2025 AgroConecta. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <div id="notification" class="notification"></div>
-
-    <script>
-        function showNotification(message, type = 'success') {
-            const notification = document.getElementById('notification');
-            notification.textContent = message;
-            notification.className = 'notification ' + type + ' show'; // Adiciona classe 'show' e tipo
-
-            setTimeout(() => {
-                notification.className = 'notification ' + type; // Remove 'show' para iniciar fade-out
-                setTimeout(() => {
-                    notification.className = 'notification'; // Reseta a classe após a transição
-                }, 500); // Tempo da transição CSS
-            }, 3000); // Notificação visível por 3 segundos
-        }
-    </script>
 </body>
 </html>
