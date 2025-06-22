@@ -251,25 +251,24 @@ html {
     height: 100%;
 }
 
-.icon-circle {
-    width: 60px;
-    height: 60px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border-radius: 50%;
-    font-size: 2rem;
-    line-height: 1;
-    margin: 0 auto 20px;
-    position: relative;
-    display: block;
+/* MODIFICAÇÃO APLICADA AQUI PARA USAR SUAS IMAGENS PNG */
+.info-item-icon { /* Esta é a classe que você adicionou nas tags <img> no HTML */
+    width: 60px; /* Adapte o tamanho para sua imagem. Originalmente era para ícone, mas funciona bem para imagens pequenas */
+    height: 60px; /* Garante que a altura seja igual à largura para um círculo perfeito */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    margin: 0 auto 20px; /* Centraliza a imagem e adiciona margem inferior */
+    background-color: var(--primary-color); /* Adiciona uma cor de fundo ao círculo, útil se a imagem tiver transparência */
+    padding: 5px; /* Ajuste o padding se necessário para o visual da sua imagem dentro do círculo */
+    display: block; /* Para garantir que o margin: auto funcione para centralizar */
 }
 
-.icon-circle i {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% + 25px));
+/* Se você ainda tiver a classe .icon-circle e não for mais usá-la, pode remover ou comentar: */
+.icon-circle {
+    display: none; /* Oculta os ícones Font Awesome se você os substituiu por imagens */
+    /* Caso contrário, se ainda usar Font Awesome em outros lugares, mantenha este estilo se quiser que eles apareçam */
 }
+
 
 .info-item h4 {
     font-size: 1.15rem;
@@ -794,4 +793,5 @@ html {
     .login-title {
         font-size: 1.8rem;
     }
-}
+  }
+  
